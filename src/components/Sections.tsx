@@ -1,0 +1,22 @@
+import { ArrowDownRight, Asterisk, Code2, Layers3, Sparkles, Server, Wrench } from 'lucide-react';
+import SectionTitle from './SectionTitle';
+import ProjectCard from './ProjectCard';
+import { skills, projects, journey, contact } from '../data/portfolio';
+import '../styles/sections.css';
+
+export function About() {
+ return <section className="portfolio-section about-section" id="about"><div className="section-wrap"><SectionTitle eyebrow="A LITTLE ABOUT ME" title="More than" accent="pixels & code." description="The person behind the pixels, and the curiosity that keeps me creating."/><div className="about-grid"><div className="about-art" aria-hidden="true"><div className="about-art-stars">✦ <span>✧</span></div><div className="about-orbit about-orbit-a"/><div className="about-orbit about-orbit-b"/><div className="about-sphere"/><div className="about-art-caption"><span>ALWAYS EXPLORING</span><span>✦</span></div></div><div className="about-copy"><span className="small-index">A HUMAN, FIRST AND FOREMOST <span>01 / 04</span></span><h3>Hey, I’m a creative developer with a <em>curious mind.</em></h3><p>I focus on computer vision, OCR, large language models and retrieval-augmented generation. I enjoy exploring how deep learning and modern AI can help solve practical problems.</p><p>Whether I’m shaping an interface or figuring out a tricky problem, I’m always looking for that little detail that makes something memorable.</p><a className="text-link" href="#contact">A LITTLE MORE ABOUT WORKING TOGETHER <ArrowDownRight size={16}/></a></div></div></div></section>
+}
+export function Skills() {
+ const icons = [Code2, Layers3, Server, Sparkles, Wrench];
+ return <section className="portfolio-section skills-section" id="skills"><div className="section-wrap"><SectionTitle eyebrow="THE TOOLKIT" title="A little bit of" accent="everything." description="A mix of creative thinking and technical craft, always evolving."/><div className="skills-grid">{skills.map((skill, i) => {const Icon=icons[i]; return <article className="skill-card" key={skill.title}><div className="skill-top"><span className="skill-icon"><Icon size={22}/></span><span>{skill.number} / 05</span></div><h3>{skill.title}</h3><p>{skill.description}</p><div className="tag-list">{skill.tags.map(tag => <span key={tag}>{tag}</span>)}</div></article>})}</div><div className="section-footnote"><span>✦ &nbsp; ALWAYS LEARNING, ALWAYS CREATING</span><span>THE TOOLBOX KEEPS GROWING ✧</span></div></div></section>
+}
+export function Projects() {
+ return <section className="portfolio-section projects-section" id="projects"><div className="section-wrap"><SectionTitle eyebrow="SELECTED WORK" title="Projects in" accent="orbit." description="Public repositories spanning AI, computer vision, web products and more."/><div className="projects-grid">{projects.map(project => <ProjectCard project={project} key={project.number}/>)}</div><p className="concept-note">✦ &nbsp; Explore the repositories for implementation details and current project status.</p></div></section>
+}
+export function Journey() {
+ return <section className="portfolio-section journey-section" id="journey"><div className="section-wrap journey-layout"><div><SectionTitle eyebrow="THE JOURNEY SO FAR" title="A work in" accent="progress." description="Every good story is made one small step at a time."/><div className="journey-stamp" aria-hidden="true"><Asterisk size={54}/><span>MADE OF CURIOSITY<br/> & A LITTLE STARDUST</span></div></div><div className="timeline">{journey.map((item,i) => <article className="timeline-item" key={item.date}><div className="timeline-marker"><span/></div><div><span className="timeline-date">{item.date} <b>0{i+1}</b></span><h3>{item.title}</h3><p>{item.description}</p></div></article>)}</div></div></section>
+}
+export function Contact() {
+ return <section className="contact-section" id="contact"><div className="section-wrap contact-inner"><div className="contact-stars" aria-hidden="true">✦ <span>✧</span></div><span className="section-eyebrow"><i/> LET'S CONNECT</span><h2>Let's build something<br/><em>out of this world.</em></h2><p>Explore my projects and follow my work on GitHub.</p><a className="contact-button" href={contact.github} target="_blank" rel="noopener noreferrer">VISIT MY GITHUB <ArrowDownRight size={17}/></a></div></section>
+}

@@ -1,0 +1,3 @@
+import { ArrowUp, Github } from 'lucide-react';
+import { contact } from '../data/portfolio';
+export default function Footer() { return <footer className="footer"><div className="container footer-inner"><a href="#top" className="brand"><span className="brand-mark">*</span> Phan Duy Bảo<span className="brand-dot">.</span></a><p>Copyright {new Date().getFullYear()} Phan Duy Bảo. Made for the journey.</p><div className="footer-right">{contact.github && <a href={contact.github} aria-label="GitHub"><Github size={16}/></a>}<a href="#top" className="back-top">BACK TO TOP <ArrowUp size={15}/></a></div></div></footer> }

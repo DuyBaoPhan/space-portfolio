@@ -1,0 +1,8 @@
+import { ArrowDown, ArrowUpRight } from 'lucide-react';
+import { lazy, Suspense } from 'react';
+const SpaceScene = lazy(() => import('../three/SpaceScene'));
+export default function Hero() {
+ return <section id="top" className="hero"><div className="hero-grid container"><div className="hero-copy"><div className="eyebrow"><span className="status-dot"/> EXPLORING WHAT'S POSSIBLE</div><p className="hero-intro">Hello, universe. I'm</p><h1>Phan Duy Bảo<span className="outline-dot">.</span></h1><p className="hero-role">AI / ML ENGINEER <span>/</span><br/>CREATIVE DEVELOPER</p><p className="hero-description">Building intelligent systems with computer vision, OCR, LLMs and RAG — and exploring ideas across the wider world of technology.</p><div className="hero-actions"><a className="button button-primary" href="#projects">Explore my work <ArrowUpRight size={17}/></a><a className="button button-secondary" href="#contact">Contact me <ArrowUpRight size={17}/></a></div></div><div className="hero-visual"><div className="visual-orbit orbit-one"/><div className="visual-orbit orbit-two"/><Suspense fallback={<div className="scene-loading" aria-label="Loading space scene"/>}><SpaceScene/></Suspense><div className="visual-label visual-label-top"><span>*</span> A WORLD OF IDEAS</div><div className="visual-label visual-label-bottom"><span className="mini-line"/> BUILT FOR WHAT'S NEXT</div></div></div><div className="hero-bottom container"><a href="#about" className="scroll-cue"><span className="scroll-icon"><ArrowDown size={15}/></span> SCROLL TO EXPLORE</a><span className="hero-coordinate">PORTFOLIO / 001 � 006</span></div><span className="hero-side">CREATIVITY MEETS INTELLIGENCE</span></section>;
+}
+
+

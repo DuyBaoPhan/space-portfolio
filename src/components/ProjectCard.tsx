@@ -1,0 +1,7 @@
+import { ArrowUpRight, Sparkles } from 'lucide-react';
+import Reveal from './Reveal';
+type Project = { number: string; category: string; title: string; description: string; details: string; tags: string[]; theme: string; label: string; github?: string; demo?: string };
+export default function ProjectCard({ project }: { project: Project }) {
+  return <Reveal><article className="project-card"><div className={`project-visual project-visual--${project.theme}`}><span className="visual-label">✦ &nbsp; {project.label}</span><div className="planet planet-one"/><div className="planet planet-two"/><div className="orbit-ring orbit-ring-one"/><div className="orbit-ring orbit-ring-two"/><div className="visual-center"><Sparkles size={36}/></div><span className="visual-bottom">EXPLORE THE PROJECT <span> / {project.number}</span></span></div><div className="project-info"><div className="project-meta"><span>{project.category}</span><span>{project.number}</span></div><div className="project-name"><h3>{project.title}</h3><ArrowUpRight size={20} aria-hidden="true" /></div><p>{project.description}</p><div className="tag-list">{project.tags.map(tag => <span key={tag}>{tag}</span>)}</div><details className="project-details"><summary>View Details</summary><p>{project.details}</p>{project.github && <a href={project.github} target="_blank" rel="noreferrer">GitHub <ArrowUpRight size={14}/></a>}{project.demo && <a href={project.demo} target="_blank" rel="noreferrer">Live demo <ArrowUpRight size={14}/></a>}</details></div></article></Reveal>;
+}
+

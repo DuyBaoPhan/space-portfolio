@@ -1,0 +1,21 @@
+﻿export const skills = [
+  { number: '01', title: 'Programming', description: 'Languages represented across public repositories.', tags: ['Python', 'JavaScript', 'TypeScript', 'Dart'] },
+  { number: '02', title: 'Frontend', description: 'Web interfaces and interactive products.', tags: ['React', 'HTML', 'CSS', 'SCSS'] },
+  { number: '03', title: 'AI & Machine Learning', description: 'Intelligent systems for language, images, and documents.', tags: ['Computer Vision', 'OCR', 'Deep Learning', 'NLP', 'LLM', 'RAG'] },
+  { number: '04', title: 'AI Systems', description: 'Exploring agents, retrieval, and resource-efficient inference.', tags: ['Multi-Agent Systems', 'Graph RAG', 'Quantized LLM', 'Raspberry Pi'] },
+  { number: '05', title: 'Tools & Platforms', description: 'Technologies used across selected public projects.', tags: ['GitHub', 'Supabase', 'Overpass API', 'VietOCR'] },
+];
+export const projects = [
+  { number: '01', category: 'AI / MULTI-AGENT', title: 'Multi-Agent Graph RAG', description: 'A multi-agent LLM system exploring graph-based retrieval and generation.', details: 'The public repository describes a multi-agent LLM system using Graph RAG. Explore the repository for implementation details and the current state of the project.', tags: ['Python', 'Multi-Agent', 'Graph RAG', 'LLM'], theme: 'orbit', label: 'PUBLIC REPOSITORY', github: 'https://github.com/DuyBaoPhan/multi-agent-graph-rag', demo: '' },
+  { number: '02', category: 'AI / EDGE INFERENCE', title: 'NLP Parser Chatbot', description: 'A lightweight NLP and RAG chatbot designed for Raspberry Pi 4.', details: 'The repository describes NLP parsing, retrieval-augmented generation and quantized LLM inference optimized for Raspberry Pi 4.', tags: ['Python', 'NLP', 'RAG', 'Raspberry Pi'], theme: 'observatory', label: 'PUBLIC REPOSITORY', github: 'https://github.com/DuyBaoPhan/nlp-parser-chatbot', demo: '' },
+  { number: '03', category: 'OCR / COMPUTER VISION', title: 'VietOCR Label Tool', description: 'A labeling tool for working with VietOCR datasets.', details: 'A Python-based public repository described as a label tool for VietOCR.', tags: ['Python', 'OCR', 'VietOCR'], theme: 'nova', label: 'PUBLIC REPOSITORY', github: 'https://github.com/DuyBaoPhan/label_tool', demo: '' },
+  { number: '04', category: 'LEARNING / WEB APP', title: 'TOEIC Vocabulary', description: 'A vocabulary learning app combining spaced repetition with gamification.', details: 'The repository describes a React and Supabase application with FSRS spaced repetition, topic-based vocabulary and gamification.', tags: ['TypeScript', 'React', 'Supabase', 'FSRS'], theme: 'nova', label: 'PUBLIC REPOSITORY', github: 'https://github.com/DuyBaoPhan/web-toeic-vocab', demo: '' },
+  { number: '05', category: 'GEOSPATIAL / DATA', title: 'GridScout OSM', description: 'A grid-based spatial data scraper using OpenStreetMap.', details: 'The repository describes parallel fetching and deduplication using the OpenStreetMap Overpass API.', tags: ['OpenStreetMap', 'Overpass API', 'Geospatial'], theme: 'orbit', label: 'PUBLIC REPOSITORY', github: 'https://github.com/DuyBaoPhan/gridscout-osm', demo: '' },
+  { number: '06', category: 'GAME / WEB', title: 'Snake Game Online', description: 'An online Snake game with a real-time global leaderboard.', details: 'A JavaScript game project whose repository describes online play and a real-time global leaderboard.', tags: ['JavaScript', 'Game Development'], theme: 'observatory', label: 'PUBLIC REPOSITORY', github: 'https://github.com/DuyBaoPhan/snake-game-online', demo: '' },
+];
+export const contact = { email: '', github: 'https://github.com/DuyBaoPhan', linkedin: '' };
+export const journey = [
+  { date: 'COMPUTER VISION', title: 'Seeing and understanding', description: 'Exploring OCR and computer vision through projects including VietOCR labeling tools and license plate recognition.' },
+  { date: 'LANGUAGE & AI', title: 'From NLP to agents', description: 'Building public projects around NLP, language models, RAG and multi-agent systems.' },
+  { date: 'BUILDING PRODUCTS', title: 'Learning by making', description: 'Exploring web applications, geospatial tools and game development alongside AI projects.' },
+];
